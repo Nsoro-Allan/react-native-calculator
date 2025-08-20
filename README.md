@@ -35,9 +35,25 @@ A powerful, feature-rich calculator app built with React Native and Expo, offeri
 ## Getting Started 🚀
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn package manager
-- Expo CLI (optional but recommended)
+
+Before running this app, you need to have the following installed:
+
+#### 1. **Node.js Installation**
+- **Download**: Visit [nodejs.org](https://nodejs.org/) and download the LTS version
+- **Windows**: Download the Windows installer (.msi) and run it
+- **macOS**: Download the macOS installer (.pkg) or use Homebrew: `brew install node`
+- **Linux**: Use your package manager or download from the official site
+- **Verify installation**: Run `node --version` and `npm --version` in your terminal
+
+#### 2. **Expo CLI Installation**
+After installing Node.js, install Expo CLI globally:
+```bash
+npm install -g @expo/cli
+# or using yarn
+yarn global add @expo/cli
+```
+
+**Alternative**: You can also use `npx expo` without installing globally.
 
 ### Installation
 
@@ -56,8 +72,11 @@ A powerful, feature-rich calculator app built with React Native and Expo, offeri
 
 3. **Start the development server**
    ```bash
+   npx expo start
+   # or if you have Expo CLI installed globally
+   expo start
+   # or using npm/yarn scripts
    npm start
-   # or
    yarn start
    ```
 
@@ -101,19 +120,28 @@ expo build:ios -t archive
 ## Development Commands 🛠️
 
 ```bash
-# Start development server
+# Start development server (recommended)
+npx expo start
+
+# Alternative ways to start
 npm start
+yarn start
+expo start  # if installed globally
 
 # Run on Android emulator/device
 npm run android
+npx expo run:android
 
 # Run on iOS simulator/device (macOS only)
 npm run ios
+npx expo run:ios
 
 # Run on web browser
 npm run web
+npx expo start --web
 
 # Clear cache and restart
+npx expo start --clear
 expo start -c
 ```
 
